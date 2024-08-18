@@ -3,7 +3,23 @@ Rails.application.routes.draw do
   resources :cart_items
   resources :products
   resources :carts
-  resources :users
+  resources :users do
+    collection do
+      get "get_by_mail"
+    end
+    member do
+      patch "update_mail"
+    end
+    member do
+      patch "update_password"
+    end
+    member do
+      patch "update_name"
+    end
+  end
+
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
