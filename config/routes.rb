@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   resources :images
-  resources :cart_items
+  
+  resources :cart_items do
+    collection do
+      get 'get_by_cart_id'
+    end
+  end
+  
   resources :products do
     member do
       get 'get_final_price'
@@ -13,7 +19,13 @@ Rails.application.routes.draw do
       get 'get_by_name'
     end
   end
-  resources :carts
+  
+  resources :carts do
+    collection do
+      get 'get_by_user_id'
+    end
+  end
+  
   resources :users do
     collection do
       get "get_by_mail"
