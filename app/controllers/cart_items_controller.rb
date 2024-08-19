@@ -13,6 +13,16 @@ class CartItemsController < ApplicationController
     render json: @cart_item
   end
 
+  def get_by_cart_id
+    @cart_items = CartItem.where(cart_id: params[:cart_id])
+    
+    if @cart_items.any?
+      render json: @cart_items
+    else
+      render json: { error: "No hay items en el carrito" }, status: :not_found
+    end
+  end
+
   # POST /cart_items
   def create
     @cart_item = CartItem.new(cart_item_params)
