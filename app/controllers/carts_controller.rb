@@ -13,6 +13,16 @@ class CartsController < ApplicationController
     render json: @cart
   end
 
+  def get_by_user_id
+    @cart = Cart.find_by(user_id: params[:user_id])
+    
+    if @cart
+      render json: @cart
+    else
+      render json: { error: "Carrito no encontrado" }, status: :not_found
+    end
+  end
+
   # POST /carts
   def create
     @cart = Cart.new(cart_params)
