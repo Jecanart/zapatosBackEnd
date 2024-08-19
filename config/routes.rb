@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
   resources :images
   resources :cart_items
-  resources :products
+  resources :products do
+    member do
+      get 'get_final_price'
+      patch 'update_stock'
+      patch 'update_discount'
+    end
+
+    collection do
+      get 'get_by_brand'
+      get 'get_by_name'
+    end
+  end
   resources :carts
   resources :users do
     collection do
