@@ -24,6 +24,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def user_params
+    params.require(:user).permit(:user_name, :user_mail, :user_password, :is_admin)
+  end
+
   # PATCH/PUT /users/1
   def update
     if @user.update(user_params)

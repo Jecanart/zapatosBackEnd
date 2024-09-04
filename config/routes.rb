@@ -1,31 +1,38 @@
 Rails.application.routes.draw do
   resources :images
-  
+  resources :sessions, only: [ :create, :destroy ]
+  resources :users, only: [ :index, :show, :create, :update, :destroy ]
+  get :logged_in, to: "sessions#logged_in"
+  post "/register", to: "users#create"
+  post "login", to: "sessions#create"
+  delete "logout", to: "sessions#destroy"
+  get "logged_in", to: "sessions#logged_in"
+
   resources :cart_items do
     collection do
-      get 'get_by_cart_id'
+      get "get_by_cart_id"
     end
   end
-  
+
   resources :products do
     member do
-      get 'get_final_price'
-      patch 'update_stock'
-      patch 'update_discount'
+      get "get_final_price"
+      patch "update_stock"
+      patch "update_discount"
     end
 
     collection do
-      get 'get_by_brand'
-      get 'get_by_name'
+      get "get_by_brand"
+      get "get_by_name"
     end
   end
-  
+
   resources :carts do
     collection do
-      get 'get_by_user_id'
+      get "get_by_user_id"
     end
   end
-  
+
   resources :users do
     collection do
       get "get_by_mail"
