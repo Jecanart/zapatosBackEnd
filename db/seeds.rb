@@ -1,9 +1,13 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+Product.create(product_name: 'Tenis Ultrabounce', product_price: 149.90, stock: 15, discount: 30, brand: 'adidas', main_img: 'https://assets.adidas.com/images/w_1880,f_auto,q_auto/9854b71373684bf685c8af35014686ce_9366/HP5791_01_standard.jpg')
+Product.create(product_name: 'Tenis Samba OG', product_price: 159.99, stock: 30, discount: 0, brand: 'adidas', main_img: 'https://assets.adidas.com/images/w_1880,f_auto,q_auto/3bbecbdf584e40398446a8bf0117cf62_9366/B75806_01_standard.jpg')
+Product.create(product_name: 'Tenis Kantana ', product_price: 129.90, stock: 25, discount: 50, brand: 'adidas', main_img: 'https://assets.adidas.com/images/w_1880,f_auto,q_auto/8f8d57ead56b4262a4223db63e1cee32_9366/ID5555_01_standard.jpg')
+Product.create(product_name: 'Chanclas Adillete Aqua', product_price: 44.90, stock: 40, discount: 50, brand: 'adidas', main_img: 'https://assets.adidas.com/images/w_1880,f_auto,q_auto/aaf285289cb44714a7acac0800d5e59f_9366/FY8047_01_standard.jpg')
+Product.create(product_name: 'Gazelle J', product_price: 104.99, stock: 25, discount: 0, brand: 'adidas', main_img: 'https://assets.adidas.com/images/w_1880,f_auto,q_auto/a36079b8472244dea7dca80b00ed810b_9366/BB2502_01_standard.jpg')
+Product.create(product_name: 'Chanclas Adillete Lite', product_price: 49.90, stock: 45, discount: 0, brand: 'adidas', main_img: 'https://assets.adidas.com/images/w_1880,f_auto,q_auto/d1d7a7a924564e36a6e6aaee0110194b_9366/FU8297_01_standard.jpg')
+Product.create(product_name: 'Tenis NikeCourt Zoom', product_price: 160.00, stock: 20, discount: 0, brand: 'nike', main_img: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e08de7a2-187c-4db6-b065-b37593ad9a71/ZOOM+VAPOR+CAGE+4+RAFA.png')
+Product.create(product_name: 'Tenis NikeCourt Air Zoom', product_price: 70.00, stock: 25, discount: 10, brand: 'nike', main_img: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/45914818-015b-47f0-8e55-72adff4c0178/M+NIKE+ZOOM+COURT+LITE+3.png')
+Product.create(product_name: 'Tenis NikeCourt Vapor', product_price: 85.00, stock: 15, discount: 10, brand: 'nike', main_img: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/151717cf-15aa-47b9-9547-c92fc4f972db/M+NIKE+VAPOR+LITE+2+CLY.png')
+Product.create(product_name: 'Air Jordan Low', product_price: 80.00, stock: 20, discount: 30, brand: 'nike', main_img: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/90c4c8af-0955-4917-81f2-c635704d7410/WMNS+AIR+JORDAN+1+LOW.png')
+Product.create(product_name: 'Chanclas Victori', product_price: 35.00, stock: 35, discount: 0, brand: 'nike', main_img: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fa2e7371-d725-4414-a58f-c76d16494449/NIKE+VICTORI+ONE+SLIDE.png')
+Product.create(product_name: 'Air Jordan Mid', product_price: 110.00, stock: 25, discount: 0, brand: 'nike', main_img: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9ce5904a-cb3c-40f1-9926-d544d821edc2/AIR+JORDAN+1+MID+%28GS%29.png')
+Product.create(product_name: 'Mercurial Vapor', product_price: 260.00, stock: 10, discount: 0, brand: 'nike', main_img: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/32c4e533-1f15-472c-bb50-28570ce5e766/ZM+VAPOR+16+ELITE+FG.png')
